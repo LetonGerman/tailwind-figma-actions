@@ -1,0 +1,49 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '16' ]
+    name: HTML build and validation
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run build
+      - run: npm run test
+      - uses: vishnudxb/cancel-workflow@v1.2
+        if: failure()
+        with:
+          repo: LetonGerman/figma-actions
+          workflow_id: ${{ github.run_id }}
+          access_token: ${{ github.token }}
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '16' ]
+    needs: validate
+    name: Heroku deployment
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run build
+      # Deploy
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}} #Must be unique in Heroku
+          heroku_email: ${{secrets.HEROKU_EMAIL}}

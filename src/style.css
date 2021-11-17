@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .icon-tooltip {
+        @apply hidden text-xs font-bold text-center uppercase whitespace-nowrap transition-all duration-500
+    }
+
+    .card, .card-header {
+        @apply grid-rows-fr-auto overflow-hidden
+    }
+
+    .card {
+        @apply rounded-2xl
+    }
+
+    .card-buttons {
+        @apply absolute grid grid-cols-auto-fr w-full p-6
+    }
+
+    .card-buttons .card-button, .card-buttons .icon-button, .header-menu .icon-button {
+        @apply bg-white text-black border-0 font-medium text-s overflow-hidden normal-case
+    }
+
+    .card-date {
+        @apply font-normal mb-3 font-sourceSansPro text-m
+    }
+
+    .card-title {
+        @apply font-normal mb-4 font-robotoSlab text-xl text-secondary
+    }
+
+    .card-preview {
+        @apply text-main text-sm font-normal mb-6
+    }
+
+    .card-source {
+        @apply text-main text-sm font-bold mb-5 font-robotoSlab capitalize
+    }
+
+    .icon-w-tooltip {
+        @apply grid justify-end grid-cols-mx-mx
+    }
+
+    .card-button {
+        @apply py-2 px-3
+    }
+
+    .icon-button {
+        @apply p-0
+    }
+
+    .icon-button {
+        @apply p-2
+    }
+
+    .card-content {
+        @apply p-6
+    }
+}
+

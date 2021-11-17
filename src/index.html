@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flexbox</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Source+Sans+Pro&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Reset -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      rel="stylesheet"
+    />
+
+    <!-- Milligram CSS -->
+    <!--  <link href='https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css' rel='stylesheet'>-->
+    <!--    <link href="./styles/style.css" rel="stylesheet">-->
+  </head>
+  <body class="font-roboto">
+    <div class="shadow-header">
+      <div class="container mx-auto">
+        <header class="grid grid-cols-3 min-h-80">
+          <div class="grid items-center font-bold font-robotoSlab text-sl">
+            <span>NewsExplorer</span>
+          </div>
+          <button
+            type="button"
+            class="
+              overflow-hidden
+              icon-button
+              hamburger
+              self-center
+              md:self-auto
+              inline-block
+              md:hidden
+              m-0
+              max-w-max
+              justify-self-end
+              col-span-2
+            "
+          >
+            <img src="./assets/menu.svg" alt="delete hover" />
+          </button>
+          <div
+            class="
+              additional-buttons
+              font-roboto font-medium
+              text-m
+              grid-cols-fr-auto-fr
+              col-span-2
+              justify-self-end
+              hidden
+              md:grid
+            "
+          >
+            <a class="grid items-center text-center nav-item nav-tab" href="#"
+              ><span>Главная</span></a
+            >
+            <a class="nav-item nav-tab" href="#"><span>Сохранённые статьи</span></a>
+            <a class="nav-item" href="#"
+              ><span class="profile-btn"
+                ><span>Грета</span><img src="./assets/logout.svg" alt="log out" /></span
+            ></a>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="container mx-auto">
+      <section class="ml-0 w-full nav-section text-secondary grid grid-rows-fr-auto-auto">
+        <small class="current-tab text-m font-normal text-washed mb-8">Сохранённые статьи</small>
+        <h2 class="article-counter mb-8 font-robotoSlab text-xml font-normal">
+          Грета, у вас 5<br />
+          сохранённых статей
+        </h2>
+        <p class="article-tags text-m font-normal mb-4">
+          По ключевым словам: <strong class="text-bold">Природа</strong>,
+          <strong class="text-bold">Тайга</strong> и <strong class="text-bold">2-м другим</strong>
+        </p>
+      </section>
+    </div>
+    <section class="bg-container-gray">
+      <div class="container mx-auto">
+        <div class="articles grid justify-items-center justify-center gap-4">
+          <div class="card">
+            <div class="card-header">
+              <img alt="stock news photo" src="https://picsum.photos/400/300?random=1" />
+              <div class="card-buttons">
+                <button type="button" class="card-button">Природа</button>
+                <div class="icon-w-tooltip">
+                  <button type="button" class="card-button icon-button icon-for-tooltip">
+                    <img
+                      class="filter hover:brightness-0"
+                      src="./assets/trash.svg"
+                      alt="delete hover"
+                    />
+                  </button>
+                  <span class="card-button icon-tooltip">Убрать из сохранённых</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <small class="card-date text-washed">2 августа, 2019</small>
+              <h3 class="card-title">Национальное достояние – парки</h3>
+              <p class="card-preview">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                система национальных парков – охраняемых территорий, где и сегодня каждый может
+                приобщиться к природе.
+              </p>
+              <small class="card-source text-washed">ДЗЕН</small>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img alt="stock news photo" src="https://picsum.photos/400/300?random=2" />
+              <div class="card-buttons">
+                <button type="button" class="card-button">Природа</button>
+                <div class="icon-w-tooltip">
+                  <button type="button" class="card-button icon-button icon-for-tooltip">
+                    <img
+                      class="filter hover:brightness-0"
+                      src="./assets/trash.svg"
+                      alt="delete hover"
+                    />
+                  </button>
+                  <span class="card-button icon-tooltip">Убрать из сохранённых</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <small class="card-date text-washed">2 августа, 2019</small>
+              <h3 class="card-title">Национальное достояние – парки</h3>
+              <p class="card-preview">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                система национальных парков – охраняемых территорий, где и сегодня каждый может
+                приобщиться к природе.
+              </p>
+              <small class="card-source text-washed">ДЗЕН</small>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img alt="stock news photo" src="https://picsum.photos/400/300?random=3" />
+              <div class="card-buttons">
+                <button type="button" class="card-button">Природа</button>
+                <div class="icon-w-tooltip">
+                  <button type="button" class="card-button icon-button icon-for-tooltip">
+                    <img
+                      class="filter hover:brightness-0"
+                      src="./assets/trash.svg"
+                      alt="delete hover"
+                    />
+                  </button>
+                  <span class="card-button icon-tooltip">Убрать из сохранённых</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <small class="card-date text-washed">2 августа, 2019</small>
+              <h3 class="card-title">Национальное достояние – парки</h3>
+              <p class="card-preview">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                система национальных парков – охраняемых территорий, где и сегодня каждый может
+                приобщиться к природе.
+              </p>
+              <small class="card-source text-washed">ДЗЕН</small>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img alt="stock news photo" src="https://picsum.photos/400/300?random=4" />
+              <div class="card-buttons">
+                <button type="button" class="card-button">Природа</button>
+                <div class="icon-w-tooltip">
+                  <button type="button" class="card-button icon-button icon-for-tooltip">
+                    <img
+                      class="filter hover:brightness-0"
+                      src="./assets/trash.svg"
+                      alt="delete hover"
+                    />
+                  </button>
+                  <span class="card-button icon-tooltip">Убрать из сохранённых</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <small class="card-date text-washed">2 августа, 2019</small>
+              <h3 class="card-title">Национальное достояние – парки</h3>
+              <p class="card-preview">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                система национальных парков – охраняемых территорий, где и сегодня каждый может
+                приобщиться к природе.
+              </p>
+              <small class="card-source text-washed">ДЗЕН</small>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <img alt="stock news photo" src="https://picsum.photos/400/300?random=5" />
+              <div class="card-buttons">
+                <button type="button" class="card-button">Природа</button>
+                <div class="icon-w-tooltip">
+                  <button type="button" class="card-button icon-button icon-for-tooltip">
+                    <img
+                      class="filter hover:brightness-0"
+                      src="./assets/trash.svg"
+                      alt="delete hover"
+                    />
+                  </button>
+                  <span class="card-button icon-tooltip">Убрать из сохранённых</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <small class="card-date text-washed">2 августа, 2019</small>
+              <h3 class="card-title">Национальное достояние – парки</h3>
+              <p class="card-preview">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                система национальных парков – охраняемых территорий, где и сегодня каждый может
+                приобщиться к природе.
+              </p>
+              <small class="card-source text-washed">ДЗЕН</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container mx-auto">
+      <footer class="ml-0 w-full grid grid-cols-fr-fr md:grid-cols-3 min-h-80 my-8 md:my-0 gap-8">
+        <div
+          class="
+            license
+            text-washed
+            order-1
+            md:order-none
+            col-span-2
+            grid
+            items-center
+            font-roboto font-normal
+            text-sm
+          "
+        >
+          <span>© 2020 Supersite, Powered by News API</span>
+        </div>
+        <div class="grid items-stretch justify-self-end">
+          <div class="additional-buttons font-roboto font-normal text-m grid-cols-fr-auto">
+            <div
+              class="
+                nav-item
+                footer-links
+                gap-6
+                grid-rows-2
+                md:grid-rows-1
+                justify-items-start
+                md:justify-items-center md:grid-cols-fr-auto
+              "
+            >
+              <a class="nav-item" href="#"><span>Главная</span></a>
+              <a class="nav-item" href="#"><span>Яндекс.Практикум</span></a>
+            </div>
+            <div
+              class="
+                grid
+                text-center
+                items-start
+                md:items-center
+                footer-socials
+                gap-6
+                grid-cols-fr-auto
+              "
+            >
+              <a class="nav-item" href="#"
+                ><span class="icon"><img src="./assets/github.svg" alt="github social" /></span
+              ></a>
+              <a class="nav-item" href="#"
+                ><span class="icon"><img src="./assets/fb.svg" alt="facebook social" /></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
