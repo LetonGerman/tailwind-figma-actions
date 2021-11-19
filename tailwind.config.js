@@ -21,6 +21,7 @@ module.exports = {
         '3/4': '75%',
         full: '100%',
         80: '80px',
+        300: '300px',
       },
       boxShadow: {
         header: 'inset 0 -1px 0 #D1D2D6',
