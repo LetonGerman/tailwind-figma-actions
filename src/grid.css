@@ -48,6 +48,10 @@ img {
     min-height: 740px;
 }
 
+.card {
+    max-width: 400px;
+}
+
 .card-content {
     grid-template-rows: repeat(auto-fit, auto);
 }
